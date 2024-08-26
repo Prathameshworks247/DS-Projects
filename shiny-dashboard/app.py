@@ -36,7 +36,6 @@ df_temp2 = global_temp_country.groupby(["Country","dt"])["AverageTemperature"].m
 df_temp2['dt'] = df_temp2['dt'].astype(int)
 df_temp2['ISO'] = df_temp2['Country'].apply(lambda x: get_country_iso3(x))
 
-#data3
 @reactive.calc
 def dat():
     return modified_temp_city
